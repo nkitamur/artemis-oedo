@@ -219,7 +219,7 @@ Processor:
       Name: prm:ppac:ns2fC
       Type: art::TExpConverter
 #      FileName: prm/srppac/ns2fC_700V.dat
-      FileName: prm/srppac/ns2fC_745V.dat
+      FileName: @NS2FCPRM@
 
   - name: proc:ppac:@NAME@x:qcal
     type: art::TTimingChargeCalibrationProcessor
@@ -357,8 +357,8 @@ Processor:
     type: art::TSRPPACPlaneGeneralizedRatioProcessor
     parameter:
       InputCollection: @NAME@_x_q
-      OutputCollection: @NAME@_x_gl
-      bvalue: 1
+      OutputCollection: @NAME@_x_gr
+      bvalue: @BVALUE@
       Verbose: 0
       nStrip: 94
       stripWidth: 2.55
@@ -371,8 +371,8 @@ Processor:
     type: art::TSRPPACPlaneGeneralizedRatioProcessor
     parameter:
       InputCollection: @NAME@_y_q
-      OutputCollection: @NAME@_y_gl
-      bvalue: 1
+      OutputCollection: @NAME@_y_gr
+      bvalue: @BVALUE@
       Verbose: 0
       nStrip: 58
       stripWidth: 2.58
